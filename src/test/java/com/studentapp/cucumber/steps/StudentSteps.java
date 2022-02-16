@@ -26,28 +26,29 @@ public class StudentSteps {
 		SerenityRest.rest().given()
 		.when()
 		.get("/list")
-		.then();
+		.then().statusCode(200);
 	 
 	}
-	
 
-	@When("^I create a new student by providing the information firstName (.*) lastName (.*) email (.*) programme (.*) courses (.*)$")
+
+	@When("^I create a new student by providing firstName (.*) lastName (.*) email (.*) programme (.*) course (.*)$")
+
 	public void createStudent(String firstName,String lastName,String _email,String programme,String course){
 		List<String> courses = new ArrayList<String>();
 		courses.add(course);
 		email = TestUtils.getRandomValue()+_email;
-		
+
 		System.out.println("The email is "+email);
 		steps.createStudent(firstName, lastName, email, programme, courses)
 		.statusCode(201);
 		
 	}
-	
+
 	@Then("^I verify that the student with (.*) is created$")
-	public void i_verify_that_the_student_with_name_is_created(String emailId){
-		HashMap<String, Object> resVal=  steps.getStudentInfoByFirstName(emailId);
-		
-		System.out.println("The values are : "+resVal);
+	public void i_verify_that_the_student_with_name_is_created(String firstName){
+		HashMap<String, Object> resVal=  steps.getStudentInfoByFirstName(firstName);
+
+		System.out.println("The values are : "+resVal.toString());
 		//assertThat(resVal,hasValue(emailId));
 	}
 }

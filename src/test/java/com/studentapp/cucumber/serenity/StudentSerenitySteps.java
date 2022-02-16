@@ -23,10 +23,13 @@ public class StudentSerenitySteps {
 		student.setEmail(email);
 		student.setProgramme(programme);
 		student.setCourses(courses);
+
+		System.out.println(firstName + " " + lastName + " " + email + " " + programme + " " + courses);
 	
 	return	SerenityRest.rest().given()
 		.spec(ReuseableSpecifications.getGenericRequestSpec())
 		.when()
+			.log().all()
 		.body(student)
 		.post()
 		.then();
@@ -47,6 +50,22 @@ public class StudentSerenitySteps {
 		.statusCode(200)
 		.extract()
 		.path(p1+firstName+p2);
+	}
+
+	@Step("Getting the student information with email: {0}")
+	public HashMap<String,Object> getStudentInfoByEmail(String email){
+		String p1 = "findAll{it.email =='";
+		String p2 = "'}.get(0)";
+
+		return	SerenityRest.rest().given()
+				.when()
+				.get("/list")
+				.then()
+				.log()
+				.all()
+				.statusCode(200)
+				.extract()
+				.path(p1+email+p2);
 	}
 	
 	@Step("Updating student information with studnetID: {0} firstName:{1}, lastName:{2}, email:{3},programme: {4} ,courses:{5}")

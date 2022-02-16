@@ -1,10 +1,6 @@
-/Users/cliff/Documents/javaCode/serenityTraining/demo-serenity/src/test/java/com/studentapp/junit/studentsIdinfo/StudentIdInfo.java
-/Users/cliff/Documents/javaCode/serenityTraining/demo-serenity/src/test/java/com/studentapp/junit/studentsinfo/CreateStudentsDataDrivenTest.java
-/Users/cliff/Documents/javaCode/serenityTraining/demo-serenity/src/test/java/com/studentapp/junit/studentsinfo/TagsTest.java
 /Users/cliff/Documents/javaCode/serenityTraining/demo-serenity/src/test/java/com/studentapp/cucumber/steps/StudentSteps.java
-/Users/cliff/Documents/javaCode/serenityTraining/demo-serenity/src/test/java/com/studentapp/junit/studentsinfo/StudentsCRUDTest.java
-/Users/cliff/Documents/javaCode/serenityTraining/demo-serenity/src/test/java/com/studentapp/junit/studentsinfo/FirstSerenityTest.java
 /Users/cliff/Documents/javaCode/serenityTraining/demo-serenity/src/test/java/com/studentapp/testbase/TestBase.java
 /Users/cliff/Documents/javaCode/serenityTraining/demo-serenity/src/test/java/com/studentapp/utils/TestUtils.java
 /Users/cliff/Documents/javaCode/serenityTraining/demo-serenity/src/test/java/com/studentapp/utils/ReuseableSpecifications.java
 /Users/cliff/Documents/javaCode/serenityTraining/demo-serenity/src/test/java/com/studentapp/cucumber/serenity/StudentSerenitySteps.java
+/Users/cliff/Documents/javaCode/serenityTraining/demo-serenity/src/test/java/com/studentapp/cucumber/StudentRunner.java

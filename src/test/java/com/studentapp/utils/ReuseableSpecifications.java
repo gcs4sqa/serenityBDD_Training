@@ -22,6 +22,7 @@ public class ReuseableSpecifications {
 	
 		rspec = new RequestSpecBuilder();
 		rspec.setContentType(ContentType.JSON);
+		rspec.setPort(8085);
 		requestSpecification = rspec.build();
 		return requestSpecification;
 		
